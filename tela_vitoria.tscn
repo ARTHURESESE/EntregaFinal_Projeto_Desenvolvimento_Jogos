@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dsif8wtvv5iuw"]
+
+[ext_resource type="Script" uid="uid://b5oht1b8rlaa" path="res://tela_vitoria.gd" id="1_vetyl"]
+
+[node name="TelaVitoria" type="CanvasLayer" unique_id=1705091207]
+script = ExtResource("1_vetyl")

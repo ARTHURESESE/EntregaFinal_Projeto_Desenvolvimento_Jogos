@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://cj8ruktvjy0wa"]
+
+[ext_resource type="Script" uid="uid://ca35at0il83sj" path="res://actors/two_face.gd" id="1_aa80t"]
+[ext_resource type="Texture2D" uid="uid://dwva4yen2gw63" path="res://assets/Batman RPG Maker Set 01/Two-Face.png" id="2_wcjgu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_em7yb"]
+atlas = ExtResource("2_wcjgu")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rjiv"]
+atlas = ExtResource("2_wcjgu")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jhjq"]
+atlas = ExtResource("2_wcjgu")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daxu6"]
+atlas = ExtResource("2_wcjgu")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evj0r"]
+atlas = ExtResource("2_wcjgu")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12q5w"]
+atlas = ExtResource("2_wcjgu")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2821x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_em7yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rjiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jhjq")
+}],
+"loop": true,
+"name": &"direita",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daxu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evj0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12q5w")
+}],
+"loop": true,
+"name": &"esquerda",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gw4hp"]
+radius = 13.0
+height = 38.0
+
+[node name="TwoFace" type="CharacterBody2D" unique_id=2103953075]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_aa80t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=59905959]
+sprite_frames = SubResource("SpriteFrames_2821x")
+animation = &"esquerda"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544843697]
+position = Vector2(-1, -8)
+shape = SubResource("CapsuleShape2D_gw4hp")

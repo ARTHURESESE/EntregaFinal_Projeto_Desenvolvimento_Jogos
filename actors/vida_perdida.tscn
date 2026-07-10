@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cveitmdfqieap"]
+
+[ext_resource type="Script" uid="uid://due2omvhicrnl" path="res://actors/vida_perdida.gd" id="1_s5v7p"]
+[ext_resource type="Texture2D" uid="uid://0k7acmy7lcu1" path="res://actors/vidaperdida.png" id="2_kvr7n"]
+
+[node name="VidaPerdida" type="Control" unique_id=59681601]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s5v7p")
+
+[node name="Fundo" type="TextureRect" parent="." unique_id=2094025784]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_kvr7n")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

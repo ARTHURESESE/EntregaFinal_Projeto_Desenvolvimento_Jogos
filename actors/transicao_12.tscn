@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bfxfk5ncyfydv"]
+
+[ext_resource type="Script" uid="uid://b5diul7amc260" path="res://actors/transicao_12.gd" id="1_lc2a1"]
+[ext_resource type="Texture2D" uid="uid://dsl8lgdra5cdg" path="res://actors/fase12.png" id="2_4ke5a"]
+
+[node name="Transicao12" type="Control" unique_id=59681601]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lc2a1")
+
+[node name="Fundo" type="TextureRect" parent="." unique_id=2094025784]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_4ke5a")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

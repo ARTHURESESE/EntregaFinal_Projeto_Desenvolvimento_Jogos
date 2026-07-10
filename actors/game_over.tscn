@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://8dmxw0bv51yr"]
+
+[ext_resource type="Script" uid="uid://tv8apfq5fpgn" path="res://actors/game_over.gd" id="1_sl5sl"]
+[ext_resource type="Texture2D" uid="uid://bcy3qfv6pq7e4" path="res://actors/jogarnovamente.png" id="2_sl5sl"]
+
+[node name="GameOver" type="Control" unique_id=1659105834]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sl5sl")
+metadata/_edit_use_anchors_ = true
+
+[node name="BotaoJogar" type="Button" parent="." unique_id=840554030]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 0.6
+offset_left = -138.0
+offset_top = 73.0
+offset_right = 141.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Jogar"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=204749936]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_sl5sl")
+expand_mode = 2

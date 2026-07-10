@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bogs1ntmoidws"]
+
+[ext_resource type="Texture2D" uid="uid://bk4curi4lwjf3" path="res://actors/vitoria.png" id="1_2pg5y"]
+[ext_resource type="Script" uid="uid://bnajmxap0y8v" path="res://actors/tela_vitoria.gd" id="1_tjgxu"]
+
+[node name="TelaVitoria" type="Control" unique_id=59681601]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tjgxu")
+
+[node name="BotaoMenu" type="Button" parent="." unique_id=1009993165]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 491.0
+offset_right = 643.0
+offset_bottom = 542.0
+
+[node name="Fundo" type="TextureRect" parent="." unique_id=2094025784]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_2pg5y")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

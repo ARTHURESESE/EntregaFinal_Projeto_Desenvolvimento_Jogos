@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cx1tb1w1b5xov"]
+
+[ext_resource type="Script" uid="uid://baiqcooukm62h" path="res://bloco_movel.gd" id="1_fd436"]
+[ext_resource type="Texture2D" uid="uid://dw0n8rjff53l4" path="res://assets/Cave Tileset/Scaffolding_and_BG_Parts (16 x 16).png" id="2_1pymx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fd436"]
+size = Vector2(30, 11)
+
+[node name="blocoMovel" type="AnimatableBody2D" unique_id=2007565240]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_fd436")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1334382294]
+position = Vector2(0, 1.7763568e-15)
+scale = Vector2(1, 0.9640238)
+shape = SubResource("RectangleShape2D_fd436")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1464246660]
+texture = ExtResource("2_1pymx")
+region_enabled = true
+region_rect = Rect2(16.864267, 82.270195, 30.410223, 11.2584305)

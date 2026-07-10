@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dpyo06hi7el35"]
+
+[ext_resource type="Texture2D" uid="uid://dw0n8rjff53l4" path="res://assets/Cave Tileset/Scaffolding_and_BG_Parts (16 x 16).png" id="1_718hs"]
+[ext_resource type="Script" uid="uid://cjpk578e4dilj" path="res://actors/bloco_quebra.gd" id="1_oc0nt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwk1m"]
+size = Vector2(32.25, 18.375)
+
+[node name="BlocoQuebra" type="StaticBody2D" unique_id=1385467089]
+position = Vector2(54, 8)
+collision_layer = 2
+script = ExtResource("1_oc0nt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1625975437]
+position = Vector2(0, -4.1875)
+shape = SubResource("RectangleShape2D_cwk1m")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1836500356]
+position = Vector2(0, -4)
+texture = ExtResource("1_718hs")
+region_enabled = true
+region_rect = Rect2(15.753404, 63.340916, 32.39652, 18.85693)

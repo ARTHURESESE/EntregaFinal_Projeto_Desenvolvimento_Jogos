@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://2yhjdu5xem73"]
+
+[ext_resource type="Script" uid="uid://cosd338wv42jj" path="res://actors/menu_inicial.gd" id="1_ki3pe"]
+[ext_resource type="Texture2D" uid="uid://h2o2mlkvjh6v" path="res://actors/menu1.png" id="2_hqyy5"]
+[ext_resource type="Texture2D" uid="uid://wl5ux5wi16vo" path="res://actors/controles1.png" id="3_hqyy5"]
+
+[node name="MenuInicial" type="Control" unique_id=1659105834]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ki3pe")
+metadata/_edit_use_anchors_ = true
+
+[node name="BotaoJogar" type="Button" parent="." unique_id=840554030]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 0.6
+offset_left = -146.0
+offset_top = -7.0
+offset_right = 148.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Jogar"
+
+[node name="BotaoControles" type="Button" parent="." unique_id=2074510385]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.72
+anchor_right = 0.5
+anchor_bottom = 0.72
+offset_left = -146.0
+offset_top = -7.0000305
+offset_right = 148.0
+offset_bottom = 39.99997
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Controles"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=204749936]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_hqyy5")
+expand_mode = 2
+
+[node name="ControlesOverlay" type="Control" parent="." unique_id=1605547901]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BotaoFechar" type="Button" parent="ControlesOverlay" unique_id=233570884]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 36.0
+offset_right = 141.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 20
+text = "FECHAR"
+
+[node name="FundoControles" type="TextureRect" parent="ControlesOverlay" unique_id=188243045]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_hqyy5")
+expand_mode = 1

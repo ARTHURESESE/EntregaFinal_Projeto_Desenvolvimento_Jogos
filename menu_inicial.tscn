@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cmkfdhax5yeyb"]
+
+[sub_resource type="GDScript" id="GDScript_j0oyk"]
+script/source = "extends CanvasLayer
+
+func _ready():
+	var bg = ColorRect.new()
+	bg.color = Color(0, 0, 0, 1)
+	bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(bg)
+
+	var titulo = Label.new()
+	titulo.text = \"BATMAN\\nESCAPE FROM THE PIT\"
+	titulo.add_theme_font_size_override(\"font_size\", 52)
+	titulo.add_theme_color_override(\"font_color\", Color(1, 0.84, 0, 1))
+	titulo.anchor_left = 0
+	titulo.anchor_top = 0
+	titulo.anchor_right = 1
+	titulo.anchor_bottom = 1
+	titulo.offset_left = 0
+	titulo.offset_right = 0
+	titulo.offset_top = 0
+	titulo.offset_bottom = -200
+	titulo.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	titulo.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	add_child(titulo)
+
+	var subtitulo = Label.new()
+	subtitulo.text = \"Gotham precisa de você.\"
+	subtitulo.add_theme_font_size_override(\"font_size\", 20)
+	subtitulo.add_theme_color_override(\"font_color\", Color(0.7, 0.7, 0.7, 1))
+	subtitulo.anchor_left = 0
+	subtitulo.anchor_top = 0
+	subtitulo.anchor_right = 1
+	subtitulo.anchor_bottom = 1
+	subtitulo.offset_left = 0
+	subtitulo.offset_right = 0
+	subtitulo.offset_top = 0
+	subtitulo.offset_bottom = -50
+	subtitulo.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	subtitulo.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	add_child(subtitulo)
+
+	var btn_jogar = Button.new()
+	btn_jogar.text = \"JOGAR\"
+	btn_jogar.add_theme_font_size_override(\"font_size\", 32)
+	btn_jogar.add_theme_color_override(\"font_color\", Color(1, 0.84, 0, 1))
+	btn_jogar.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
+	btn_jogar.position = Vector2(-80, -180)
+	btn_jogar.size = Vector2(160, 50)
+	btn_jogar.pressed.connect(func():
+		get_tree().change_scene_to_file(\"res://world_01.tscn\")
+	)
+	add_child(btn_jogar)
+
+	var btn_controles = Button.new()
+	btn_controles.text = \"CONTROLES\"
+	btn_controles.add_theme_font_size_override(\"font_size\", 20)
+	btn_controles.add_theme_color_override(\"font_color\", Color(0.7, 0.7, 0.7, 1))
+	btn_controles.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
+	btn_controles.position = Vector2(-80, -115)
+	btn_controles.size = Vector2(160, 40)
+	btn_controles.pressed.connect(func():
+		_mostrar_controles()
+	)
+	add_child(btn_controles)
+
+func _mostrar_controles():
+	var overlay = ColorRect.new()
+	overlay.color = Color(0, 0, 0, 0.85)
+	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	overlay.name = \"ControlesOverlay\"
+	add_child(overlay)
+
+	var texto = Label.new()
+	texto.text = \"CONTROLES\\n\\n← → ou A D — Mover\\nEspaço ou W — Pular\\nEspaço ou W (2x) — Pulo duplo*\\nESC — Pausar\\n\\n*Requer stamina cheia\\n\\nClique para fechar\"
+	texto.add_theme_font_size_override(\"font_size\", 22)
+	texto.add_theme_color_override(\"font_color\", Color(1, 0.84, 0, 1))
+	texto.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	texto.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	texto.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	overlay.add_child(texto)
+
+	overlay.gui_input.connect(func(event):
+		if event is InputEventMouseButton and event.pressed:
+			overlay.queue_free()
+	)
+	overlay.mouse_filter = Control.MOUSE_FILTER_STOP
+"
+
+[node name="MenuInicial" type="CanvasLayer" unique_id=274288407]
+script = SubResource("GDScript_j0oyk")

@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://cg2gvyqcmg5ac"]
+
+[ext_resource type="Script" uid="uid://dyfbxyvflnqy3" path="res://actors/bane.gd" id="1_ikpsd"]
+[ext_resource type="Texture2D" uid="uid://n5h4bpbrvofu" path="res://assets/Batman RPG Maker Set 01/Bane.png" id="1_u2dvo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikpsd"]
+atlas = ExtResource("1_u2dvo")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woshn"]
+atlas = ExtResource("1_u2dvo")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p37b2"]
+atlas = ExtResource("1_u2dvo")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frhwm"]
+atlas = ExtResource("1_u2dvo")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmsdt"]
+atlas = ExtResource("1_u2dvo")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7lwg"]
+atlas = ExtResource("1_u2dvo")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f4r80"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikpsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woshn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p37b2")
+}],
+"loop": true,
+"name": &"direita",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frhwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmsdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7lwg")
+}],
+"loop": true,
+"name": &"esquerda",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jk2l4"]
+radius = 7.0
+height = 46.0
+
+[node name="Bane" type="CharacterBody2D" unique_id=346818900]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_ikpsd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1091224697]
+sprite_frames = SubResource("SpriteFrames_f4r80")
+animation = &"direita"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1410368321]
+position = Vector2(0, -12)
+shape = SubResource("CapsuleShape2D_jk2l4")
